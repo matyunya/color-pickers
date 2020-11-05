@@ -12,7 +12,7 @@ These are three nearly identical color pickers implemented with Ellx in three di
 
 ## Source code
 
-<div id="code" class="flex flex-row sm:flex-column">
+<div id="code" class="flex flex-row">
 
 <div class="w-1/3">
 
@@ -79,6 +79,17 @@ export default ({
 
   #code pre {
     font-size: 12px;
+  }
+
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .flex {
+    display: flex;
+  }
+  .w-1/3 {
+    width: 33.333333%;
   }
 </style>
 
