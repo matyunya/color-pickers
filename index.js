@@ -9,6 +9,7 @@ import ColorPickerReact from "/ColorPicker.jsx";
 import LogoSvelte from "/Logo.svelte";
 import LogoVue from "/Logo.vue";
 import LogoReact from "/Logo.jsx";
+import "/index.css";
 
 export const colorPickerSvelte = svelte(ColorPickerSvelte);
 export const colorPickerVue = vue(ColorPickerVue);

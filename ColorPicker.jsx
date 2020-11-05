@@ -4,7 +4,7 @@ export default ({
   onChange,
   value
 }) => <input
-  value={value}
+  defaultValue={value}
   onInput={e => onChange(e.target.value)}
   type="color"
 />
