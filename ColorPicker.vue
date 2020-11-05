@@ -1,13 +1,12 @@
 <template>
-  <input type="color" @change="(e) => value = e.target.value">
+  <input
+    v-model="value"
+    type="color"
+  >
 </template>
 
 <script>
   export default {
-    data() {
-      return {
-        value: ""
-      }
-    }
+    props: ["value"]
   }
 </script>
