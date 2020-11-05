@@ -12,7 +12,7 @@ These are three nearly identical color pickers implemented with Ellx in three di
 
 ## Source code
 
-<div id="code" class="flex flex-row sm:flex-column">
+<div id="code" class="flex flex-row">
 
 <div class="w-1/3">
 
@@ -70,23 +70,11 @@ export default ({
 ```
 </div>
 
-<style>
-  table {
-    margin: 2rem auto;
-    font-family: monospace;
-    font-size: 18px;
-  }
-
-  #code pre {
-    font-size: 12px;
-  }
-</style>
-
 </div>
 
 ## How is this even possible?
 
-Obviously, this is not rocket science, yet Ellx simplifies the task of running whatever JavaScript at hand. By introducing (yet another) component API which allows for something like
+Obviously this is not rocket science, yet Ellx simplifies the task of running whatever JavaScript at hand. By introducing (yet another) component API which allows for something like
 
 ```
 { value = myReactComponent() }
