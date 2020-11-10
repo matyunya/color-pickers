@@ -4,11 +4,10 @@ These are three nearly identical color pickers implemented with Ellx in three di
 
 ## Demo
 
-| { logoSvelte({ value: val1 }) } | { logoReact({ value: val2 }) } | { logoVue({ value: val3 }) } |
-|--------|-------|-----|
+| { logoSvelte({ value: val1 }) }                    | { logoReact({ value: val2 }) }                    | { logoVue({ value: val3 }) }                   |
+| -------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------- |
 | { val1 = colorPickerSvelte({ value: "#ff3e00" }) } | { val2 = colorPickerReact({ value: "#61dafb" }) } | { val3 = colorPickerVue({ value: "#42b983"}) } |
-| { val1 } | { val2 } | { val3 } |
-
+| { val1 }                                           | { val2 }                                          | { val3 }                                       |
 
 ## Source code
 
@@ -58,16 +57,19 @@ export default ({
 // ColorPicker.vue
 <template>
   <input
-    v-model="value"
+    :value="value"
     type="color"
-  >
+    @input="(e) => $emit('input', e.target.value)"
+  />
 </template>
+
 <script>
   export default {
-    props: ["value"]
-  }
+    props: ["value"],
+  };
 </script>
 ```
+
 </div>
 
 </div>
@@ -81,9 +83,10 @@ Obviously this is not rocket science, yet Ellx simplifies the task of running wh
 { mySvelteComponent(value) }
 ```
 
-By default Ellx provides basic wrappers around [React](/ellx-hub/lib/utils/react.js), [Svelte]((/ellx-hub/lib/utils/svelte.js)) and [Vue](/ellx-hub/lib/utils/vue.js) in our [standard library](/ellx-hub/lib/). All of them bind to `value` prop, so in becomes the output of the component on the graph, which may not be the desired behavior but it's just an example of how to write Ellx wrappers.
+By default Ellx provides basic wrappers around [React](/ellx-hub/lib/utils/react.js), [Svelte](<(/ellx-hub/lib/utils/svelte.js)>) and [Vue](/ellx-hub/lib/utils/vue.js) in our [standard library](/ellx-hub/lib/). All of them bind to `value` prop, so in becomes the output of the component on the graph, which may not be the desired behavior but it's just an example of how to write Ellx wrappers.
 
 Here's the rest of the code:
+
 ```
 // index.js
 import svelte from "~ellx-hub/lib/utils/svelte";

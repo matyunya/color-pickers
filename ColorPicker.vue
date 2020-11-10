@@ -1,12 +1,13 @@
 <template>
   <input
-    v-model="value"
+    :value="value"
     type="color"
-  >
+    @input="(e) => $emit('input', e.target.value)"
+  />
 </template>
 
 <script>
   export default {
-    props: ["value"]
-  }
+    props: ["value"],
+  };
 </script>
